@@ -10,3 +10,10 @@ class Order(models.Model):
     def _str_(self):
         return self.customer.first_name +" " +self.customer.last_name +" "+str(self.order_total)
     
+    """
+    Represents an order placed by a customer.
+    Fields:
+        - customer: ForeignKey to the Customer model (one-to-many relationship).
+        - order_date: Timestamp indicating when the order was placed.
+        - total_amount: The total value of the order.
+    """
